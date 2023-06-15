@@ -1,15 +1,2 @@
 #!/bin/bash
-
-# Check if CFILE environment variable is set
-if [ -z "$CFILE" ]; then
-    echo "CFILE environment variable not set."
-    exit 1
-fi
-
-# Create the output file name
-outputfile="${CFILE%.*}.s"
-
-# Generate the assembly code
-gcc -S -masm=intel "$CFILE" -o "$outputfile"
-
-echo "Assembly code saved to $outputfile"
+outputfile="${CFILE%.*}.s" && gcc -S -masm=intel "$CFILE" -o "$outputfile"
