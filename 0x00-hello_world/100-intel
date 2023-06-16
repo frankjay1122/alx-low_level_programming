@@ -1,2 +1,2 @@
 #!/bin/bash
-outputfile="${CFILE%.*}.s" && gcc -S -masm=intel "$CFILE" -o "$outputfile"
+gcc -S -masm=intel $CFILE
