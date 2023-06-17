@@ -1,24 +1,26 @@
 #include <stdio.h>
 
 /**
- * main - Prints all possible combinations of single-digit numbers.
+ * main - Entry point
  *
- * Return: Always 0.
+ * Description: Prints numbers from 48 to 57, separated by commas
+ *
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
-	int num;
+	int x = 48;
 
-	for (num = 0; num <= 9; num++)
+	while (x < 58)
 	{
-		putchar((num % 10) + '0');
-		if (num == 9)
-			continue;
-		
-		putchar(',');
-		putchar(' ');
+		putchar(x);
+		if (x < 57)
+		{
+			putchar(44);
+			putchar(32);
+		}
+		x++;
 	}
-
 	putchar('\n');
 
 	return (0);
