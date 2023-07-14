@@ -47,11 +47,11 @@ int _strlen(char *s)
 
 /**
 * errors - handles errors for main
-*/
+ */
 
 void errors(void)
 {
-	printf(6"Error\n");
+	printf("%s\n", ERR_MSG);
 
 	exit(98);
 }
